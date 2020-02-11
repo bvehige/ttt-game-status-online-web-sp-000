@@ -42,12 +42,9 @@ def draw?(board)
  end 
  
  def winner(board)
-   if won? == true && win_combination.all?{|symbol| board[symbol] == "X"}
-     return "X"
-   elsif won? == true && win_combination.all?{|symbol| board[symbol] == "O"}
-     return "O"
-   else
-     nil
+   if draw?(board) || !full?(board) && !won?(board)
+     return nil
+   elsif 
    end
  end
  
